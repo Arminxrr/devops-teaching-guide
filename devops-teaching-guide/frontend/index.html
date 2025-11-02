@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>DevOps Frontend Demo</title>
+  </head>
+  <body>
+    <h1>DevOps Frontend Demo</h1>
+    <p id="now">loading...</p>
+    <script>
+      fetch('/api/users').then(r=>r.json()).then(d=>{
+        document.getElementById('now').textContent = JSON.stringify(d);
+      }).catch(e=>{
+        document.getElementById('now').textContent = 'error: ' + e;
+      });
+    </script>
+  </body>
+</html>
