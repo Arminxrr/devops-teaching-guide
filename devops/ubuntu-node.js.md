@@ -1,4 +1,4 @@
-# ติดตั้ง Ubuntu ให้พร้อมใช้งาน Node.js ก่อนทำงาน
+# ติดตั้ง Ubuntu ให้พร้อมใช้งาน Node.js
 
 <pre class="language-shellscript"><code class="lang-shellscript"><strong>## ขั้นตอนที่ 1: ติดตั้ง Node.js 18
 </strong>## อัปเดตระบบก่อน
@@ -20,6 +20,11 @@ cd ชื่อfolder
 pond#                            ##เเบบนี้คือเข้าfolder มาเเล้ว  
 ##ให้ติดตั้ง package ทั้งหมดหรือตามที่เราใช้งาน
 pond$ npm init -y
-pond$ npm i express cors dotenv jsonwebtoken express-validator multer pg 
+pond$ npm i express cors dotenv jsonwebtoken express-validator multer pg
+## ถ้าเรามี vscode 
+ pond$ code .                    ##สามารถดูไฟล์ node_modules ได้บนvscode 
 </code></pre>
 
+เราก็จะได้  node\_modules  ถ้าเรามี vscode&#x20;
+
+<div align="left"><figure><img src="../.gitbook/assets/image (1).png" alt="" width="352"><figcaption></figcaption></figure></div>
