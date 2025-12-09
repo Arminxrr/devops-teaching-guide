@@ -13,4 +13,13 @@ node -v
 npm -v
 ## ผลลัพธ์ที่ควรเห็น: Node.js v18.x.x และ npm version
 
+##ให้เราสร้าง folder 
+mkdir ชื่อfolder
+cd ชื่อfolder
+
+pond#                            ##เเบบนี้คือเข้าfolder มาเเล้ว  
+##ให้ติดตั้ง package ทั้งหมดหรือตามที่เราใช้งาน
+pond$ npm init -y
+pond$ npm i express cors dotenv jsonwebtoken express-validator multer pg 
 </code></pre>
+
