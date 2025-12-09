@@ -1,8 +1,8 @@
-# Summary
+# Table of contents
 
 * [หน้าแรก](README.md)
 * [บทที่ 1 - แนะนำ DevOps](01-แนะนำ-devops/devops-คืออะไร.md)
-  * [วงจร DevOps Lifecycle](01-แนะนำ-devops/วงจร-devops-lifecycle.md)
+  * [วงจร DevOps](01-แนะนำ-devops/วงจร-devops-lifecycle.md)
   * [เตรียมสภาพแวดล้อม](01-แนะนำ-devops/เตรียมสภาพแวดล้อม.md)
 * [บทที่ 2 - ติดตั้ง GitLab + Runner](02-ติดตั้ง-gitlab-runner/ติดตั้ง-gitlab.md)
 * [บทที่ 3 - Docker & Compose](03-docker-compose/พื้นฐาน-docker.md)
