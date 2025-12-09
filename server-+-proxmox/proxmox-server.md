@@ -21,7 +21,14 @@
 
 <div align="left"><figure><img src="../.gitbook/assets/image (5).png" alt="" width="563"><figcaption></figcaption></figure></div>
 
-หน้าสรุปก่อนติดตั้ง (Summary) ให้กดติดตั้ง\
-<br>
+หน้าสรุปก่อนติดตั้ง (Summary) ให้กดติดตั้ง
 
-<div align="left"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (6).png" alt="" width="563"><figcaption></figcaption></figure></div>
+
+หลังติดตั้งเสร็จแล้ว (Installation Complete)  กด Reboot เป็นอันเสร็จ
+
+<div align="left"><figure><img src="../.gitbook/assets/image (8).png" alt="" width="563"><figcaption></figcaption></figure></div>
+
+ใช้เพื่อดู URL สำหรับเข้าเว็บ เช่น https://192.168.1.10:8006 ตาม IP ที่เราตั้งไว้เราจะเห็นหน้าตา UI
+
+<div align="left"><figure><img src="../.gitbook/assets/image (9).png" alt="" width="563"><figcaption></figcaption></figure></div>
