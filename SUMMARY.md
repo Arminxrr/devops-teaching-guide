@@ -5,6 +5,7 @@
   * [วงจร DevOps](01-แนะนำ-devops/วงจร-devops-lifecycle.md)
   * [เตรียมสภาพแวดล้อม](01-แนะนำ-devops/เตรียมสภาพแวดล้อม.md)
   * [ติดตั้ง Ubuntu ให้พร้อมใช้งาน Node.js](devops/ubuntu-node.js.md)
+* [บทที่ # -ติดตั้ง Server + Proxmox](server-+-proxmox.md)
 * [บทที่ 2 - ติดตั้ง GitLab + Runner](02-ติดตั้ง-gitlab-runner/ติดตั้ง-gitlab.md)
 * [บทที่ 3 - Docker & Compose](03-docker-compose/พื้นฐาน-docker.md)
 * [บทที่ 4 - GitLab CI/CD](04-gitlab-ci-cd/แนะนำ-pipeline.md)
