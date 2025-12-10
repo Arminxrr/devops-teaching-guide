@@ -4,7 +4,7 @@
 
 <div align="left"><figure><img src="../.gitbook/assets/Untitled design (1).png" alt=""><figcaption></figcaption></figure></div>
 
-หน้ายอมรับเงื่อนไขการใช้งาน
+## หน้ายอมรับเงื่อนไขการใช้งาน
 
 <div align="left"><figure><img src="../.gitbook/assets/Untitled design (2).png" alt=""><figcaption></figcaption></figure></div>
 
