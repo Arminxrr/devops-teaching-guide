@@ -25,6 +25,6 @@ pond$ npm i express cors dotenv jsonwebtoken express-validator multer pg
 pond$ code .                    #สามารถดูไฟล์ node_modules ได้บนvscode 
 </code></pre>
 
-เราก็จะได้  node\_modules  มาอยู่ในโฟลเดอร์เพื่อเอามาใช้ทำโปรเจคต่างๆ
+เราก็จะได้  `node_modules`  มาอยู่ในโฟลเดอร์เพื่อเอามาใช้ทำโปรเจคต่างๆ
 
 <div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
