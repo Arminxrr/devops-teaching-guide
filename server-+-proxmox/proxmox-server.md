@@ -1,22 +1,22 @@
 # วิธีการติดตั้ง Proxmox บน Server
 
-เลือก Boot เมนูเริ่มติดตั้ง
+## หน้าเลือก Boot เมนูเริ่มติดตั้ง
 
 <div align="left"><figure><img src="../.gitbook/assets/Untitled design (1).png" alt=""><figcaption></figcaption></figure></div>
 
-ยอมรับเงื่อนไขการใช้งาน
+หน้ายอมรับเงื่อนไขการใช้งาน
 
 <div align="left"><figure><img src="../.gitbook/assets/Untitled design (2).png" alt=""><figcaption></figcaption></figure></div>
 
-ตั้งค่า Location / Timezone&#x20;
+หน้าตั้งค่า Location / Timezone&#x20;
 
 <figure><img src="../.gitbook/assets/4.png" alt=""><figcaption></figcaption></figure>
 
-ตั้งค่า Root Password + Email ของเราเอง<br>
+หน้าตั้งค่า Root Password + Email ของเราเอง<br>
 
 <figure><img src="../.gitbook/assets/5.png" alt=""><figcaption></figcaption></figure>
 
-ตั้งค่า Network (IP Address / Gateway / DNS)\
+หน้าตั้งค่า Network (IP Address / Gateway / DNS)\
 เป็น IP ที่เราเช็ตไว้เเบบ Static IP เพื่อไม่ให้มีปัญหาเรื่องพอร์ตชนกัน
 
 <figure><img src="../.gitbook/assets/6.png" alt=""><figcaption></figcaption></figure>
@@ -25,7 +25,7 @@
 
 <figure><img src="../.gitbook/assets/7.png" alt=""><figcaption></figcaption></figure>
 
-หลังติดตั้งเสร็จแล้ว (Installation Complete)  กด Reboot เป็นอันเสร็จ
+หน้าหลังติดตั้งเสร็จแล้ว (Installation Complete)  กด Reboot เป็นอันเสร็จ
 
 <figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
