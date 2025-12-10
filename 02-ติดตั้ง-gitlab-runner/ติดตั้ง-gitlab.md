@@ -1,4 +1,8 @@
-# ติดตั้ง GitLab CE (Omnibus แบบง่าย)
+---
+icon: gitlab
+---
+
+# บทที่ 2 - ติดตั้ง GitLab + Runner
 
 > ตัวอย่างตั้งค่า URL ภายในเครือข่าย `http://gitlab.local` (แก้เป็น IP/โดเมนของคุณ)
 

@@ -1,4 +1,8 @@
-# ติดตั้ง Prometheus + Node Exporter ด้วย Compose
+---
+icon: tv
+---
+
+# บทที่ 6 - Monitoring & Logging
 
 สร้างไฟล์ `monitoring-compose.yml`:
 
@@ -18,6 +22,7 @@ services:
 ```
 
 ไฟล์ `monitoring/prometheus.yml`:
+
 ```yaml
 global:
   scrape_interval: 15s
@@ -32,7 +37,9 @@ scrape_configs:
 ```
 
 รัน:
+
 ```bash
 docker compose -f monitoring-compose.yml up -d
 ```
+
 เปิดดู: `http://localhost:9090`

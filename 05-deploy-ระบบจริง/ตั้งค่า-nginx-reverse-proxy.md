@@ -1,4 +1,8 @@
-# ตั้งค่า Nginx Reverse Proxy
+---
+icon: person-walking-luggage
+---
+
+# บทที่ 5 - Deploy ระบบจริง
 
 ไฟล์ตัวอย่าง `/etc/nginx/sites-available/app.conf`:
 
@@ -21,6 +25,7 @@ server {
 ```
 
 คำสั่งพื้นฐาน:
+
 ```bash
 sudo nginx -t
 sudo systemctl reload nginx
