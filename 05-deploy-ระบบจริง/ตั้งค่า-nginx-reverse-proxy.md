@@ -1,5 +1,5 @@
 ---
-icon: person-walking-luggage
+icon: code-pull-request-closed
 ---
 
 # บทที่ 5 - Deploy ระบบจริง
