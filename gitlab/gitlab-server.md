@@ -33,5 +33,11 @@ sudo docker run -d \
   gitlab/gitlab-ce:latest
 #รอเสร็จประมาณ 5 นาทีเพราะไฟล์มีขนาดใหญ่
 
+#
+sudo docker exec -it gitlab-ce gitlab-rake "gitlab:password:reset[root]"
+
 ```
 
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
