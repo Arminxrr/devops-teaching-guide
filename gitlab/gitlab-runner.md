@@ -34,3 +34,7 @@ ddfbc5e6ac4c   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   12 secon
 docker exec -it gitlab-runner gitlab-runner register
 
 ```
+
+
+
+<figure><img src="../.gitbook/assets/Ether (8).png" alt=""><figcaption></figcaption></figure>
