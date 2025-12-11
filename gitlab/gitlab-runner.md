@@ -35,6 +35,8 @@ docker exec -it gitlab-runner gitlab-runner register
 
 ```
 
-
+{% hint style="success" %}
+ถ้าขึ้น Statu เเบบนี้เเปลว่า รันเเล้ว
+{% endhint %}
 
 <figure><img src="../.gitbook/assets/Ether (8).png" alt=""><figcaption></figcaption></figure>
