@@ -14,6 +14,10 @@ sudo systemctl status ssh
 ssh pond@192.168.1.11
 pond@vm1:~$
 
+#เมื่อเราโยนลงไฟล์ไปเเล้วให้ดึงลงมาที่ VM
+scp -r user@IPต้นทาง:/path/ต้นทาง /path/ปลายทาง
+sudo scp -r root@192.168.100.100:/root/offline /home/root/
+
 #ถ้าเราเอาไฟล์ offline ที่ผมให้ไปเเล้วจะสามารถติดตั้งได้เเล้ว
 pond@vm1:~$ ls
 docker-offline
