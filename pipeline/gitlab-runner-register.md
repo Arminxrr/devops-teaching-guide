@@ -1,6 +1,6 @@
 # การสร้าง Gitlab-Runner Register
 
-## เข้าไปที่ [`http://192.168.100.11/`](http://192.168.100.11/dashboard/home)  ที่ตั้งไว้ กดไปที่ Admin&#x20;
+## url [`http://192.168.100.11/`](http://192.168.100.11/dashboard/home)  ที่ตั้งไว้ กดไปที่ Admin&#x20;
 
 <div align="left"><figure><img src="../.gitbook/assets/42.png" alt=""><figcaption></figcaption></figure></div>
 
