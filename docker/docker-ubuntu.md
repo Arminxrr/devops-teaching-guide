@@ -20,7 +20,7 @@ sudo scp -r root@192.168.100.100:/root/offline /home/root/
 
 #ถ้าเราเอาไฟล์ offline ที่ผมให้ไปเเล้วจะสามารถติดตั้งได้เเล้ว
 pond@vm1:~$ ls
-docker-offline
+docker-offline  gitlab-ce.tar  gitlab-runner.tar  ssh-offline
 
 #จะเจอกับFolder docker-offline ให้ใช้คำสั่ง cd เข้าไป
 pond@vm1:~$ cd docker-offline
