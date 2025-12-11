@@ -15,7 +15,7 @@
   * [การโยนไฟล์ลงเครื่อง Server เพื่อติดตั้ง docker offline](docker/server-docker-offline.md)
   * [ติดตั้ง Docker บน Ubuntu](docker/docker-ubuntu.md)
 * [บทที่ 2 - ติดตั้ง GitLab + Runner](gitlab/README.md)
-  * [ติดตั้ง Gitlab Server](gitlab/gitlab-server.md)
+  * [ติดตั้ง Gitlab Server บน Ubuntu](gitlab/gitlab-server-ubuntu.md)
 * [บทที่ 4 - GitLab CI/CD](04-gitlab-ci-cd/แนะนำ-pipeline.md)
 * [บทที่ 5 - Deploy ระบบจริง](05-deploy-ระบบจริง/ตั้งค่า-nginx-reverse-proxy.md)
 * [บทที่ 6 - Monitoring & Logging](06-monitoring-logging/ติดตั้ง-prometheus.md)

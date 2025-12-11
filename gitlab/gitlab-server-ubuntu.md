@@ -1,4 +1,6 @@
-# ติดตั้ง Gitlab Server
+# ติดตั้ง Gitlab Server บน Ubuntu
+
+> Ubuntu 24
 
 ```shellscript
 # ที่ผมให้โยนเข้าไปจะมี ไฟล์พวกนี้อยู่
@@ -33,11 +35,15 @@ sudo docker run -d \
   gitlab/gitlab-ce:latest
 #รอเสร็จประมาณ 5 นาทีเพราะไฟล์มีขนาดใหญ่
 
-#
+#http://192.168.100.11 /เช็คด้วยการเข้าหน้า url IP ที่เราตั้งไว้
 sudo docker exec -it gitlab-ce gitlab-rake "gitlab:password:reset[root]"
 
 ```
 
+URL [`http://192.168.100.11/`](http://192.168.100.11/dashboard/projects) ที่เราตั้ง url ไว้ login ด้วย root กับ password ที่ reset ไว้
+
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+> GITLAB CE SERVER&#x20;
