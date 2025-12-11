@@ -21,9 +21,9 @@ sudo mkdir -p /srv/gitlab/logs
 sudo mkdir -p /srv/gitlab/data
 sudo chmod -R 777 /srv/gitlab
 
-#คำสั่งติดตั้ง gitlab-server --hostname 192.168.100.XX \ urlเปลี่ยนได้ตามที่เราต้องการ 
+#คำสั่งติดตั้ง gitlab-server --hostname 192.168.xx.xx \ urlเปลี่ยนได้ตามที่เราต้องการ 
 sudo docker run -d \
-  --hostname 192.168.100.20 \
+  --hostname 192.168.100.10 \
   -p 80:80 \
   -p 443:443 \
   -p 2222:22 \
