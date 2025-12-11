@@ -1,0 +1,36 @@
+# ติดตั้ง Gitlab runner
+
+```shellscript
+#ดูว่ามีไฟล์เเล้วหรือยัง
+pond@vm1:~$ ls
+docker-offline  gitlab-ce.tar  gitlab-runner.tar  ssh-offline
+
+#ถ้ามีอยู่เเล้วให้ใช้คำสั่งนี้เลย
+pond@vm1:~$ sudo docker load -i gitlab-runner.tar
+
+#เราก็จะได้ images มา
+pond@vm1:~$ sudo docker images
+                                                                                                                                i Info →   U  In Use
+IMAGE                         ID             DISK USAGE   CONTENT SIZE   EXTRA
+gitlab/gitlab-ce:latest       f57bc87b0ee0       6.07GB         1.83GB    U
+gitlab/gitlab-runner:latest   03db513786ad        439MB          102MB
+
+#สร้างcontainer
+sudo docker run -d --name gitlab-runner \
+  --restart always \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+  gitlab/gitlab-runner:latest
+
+#เช็คว่า container ขึ้นแล้ว
+docker ps | grep gitlab-runner
+
+#จะเห็นว่ามันรันอยู่ ถ้าเห็น gitlab-runner = พร้อม register ✅
+
+pond@vm1:~$ sudo docker ps | grep gitlab-runner
+ddfbc5e6ac4c   gitlab/gitlab-runner:latest   "/usr/bin/dumb-init …"   12 seconds ago   Up 11 seconds                                                                                                                                  gitlab-runner
+
+#คำสั่ง register gitlab runner
+docker exec -it gitlab-runner gitlab-runner register
+
+```
