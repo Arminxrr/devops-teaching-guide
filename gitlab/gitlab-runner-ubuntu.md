@@ -15,6 +15,10 @@ IMAGE                         ID             DISK USAGE   CONTENT SIZE   EXTRA
 gitlab/gitlab-ce:latest       f57bc87b0ee0       6.07GB         1.83GB    U
 gitlab/gitlab-runner:latest   03db513786ad        439MB          102MB
 
+#ถ้า docker: permission denied ... docker.sock ให้เพิ่ม user ที่รันคำสั่ง (เช่น pond) เข้า group docker แล้ว reboot:
+sudo usermod -aG docker pond
+sudo reboot
+
 #สร้างcontainer
 docker run -d \
   --name gitlab-runner \
