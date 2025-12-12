@@ -1,4 +1,4 @@
-# ติดตั้ง Gitlab runner
+# ติดตั้ง Gitlab runner บน Ubuntu
 
 ```shellscript
 #ดูว่ามีไฟล์เเล้วหรือยัง
@@ -16,11 +16,14 @@ gitlab/gitlab-ce:latest       f57bc87b0ee0       6.07GB         1.83GB    U
 gitlab/gitlab-runner:latest   03db513786ad        439MB          102MB
 
 #สร้างcontainer
-sudo docker run -d --name gitlab-runner \
+docker run -d \
+  --name gitlab-runner \
   --restart always \
-  -v /var/run/docker.sock:/var/run/docker.sock \
   -v /srv/gitlab-runner/config:/etc/gitlab-runner \
-  gitlab/gitlab-runner:latest
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /usr/bin/docker:/usr/bin/docker \
+  gitlab/gitlab-runner:latest \
+  run --user=root --working-directory=/root
 
 #เช็คว่า container ขึ้นแล้ว
 docker ps | grep gitlab-runner
