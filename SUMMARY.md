@@ -20,6 +20,7 @@
 * [บทที่ 6 - GitLab CI/CD](pipeline/README.md)
   * [การสร้าง Gitlab-Runner Register](pipeline/gitlab-runner-register.md)
   * [ทำ CI/CD Pipeline](pipeline/ci-cd-pipeline.md)
+  * [ขั้นตอน public key ไปใส่ใน GitLab](pipeline/public-key-gitlab.md)
 * [บทที่ 7 - Deploy ระบบจริง](nginx-reverse-proxy/README.md)
   * [สร้าง Reop เพื่อ Deploy](nginx-reverse-proxy/reop-deploy.md)
 * [บทที่ 8 - Monitoring & Logging](06-monitoring-logging/ติดตั้ง-prometheus.md)

@@ -9,7 +9,7 @@ description: >-
 
 ## เริ่มเเรกเราจำสร้าง repo ไว้ก่อนกดไปที่ Admin
 
-<figure><img src="../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<div align="left"><figure><img src="../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure></div>
 
 ## กด Create Project
 
@@ -32,8 +32,66 @@ sudo apt install -y openssh-server
 เสร็จแล้วเช็คว่า service รันหรือยัง
 sudo systemctl status ssh
 
-ตัวอย่างการเข้า tm
-ssh pond@192.168.1.10
+#ตัวอย่างการเข้า terminal
+ssh pond@192.168.100.10
+
+#ถ้า terminal เข้าไม่ได้ได้ให้
+ssh-keygen -R 192.168.100.10
+
+#เข้า ssh pond@192.168.100.10 ก็จะสามารถ remote จาก terminal ได้ของ VM1
+#ให้เราติดตั้ง gitlab server gitlab runer ให้เรียบร้อย บนVM1
+pond@vm1:~$ 
+
+#ให้ใช้คำสั่งนี้เข้าไปเเก้ 
+sudo docker exec -it gitlab-ce bash
+#จะได้หน้าตาเเบบนี้
+root@192:/#
+
+#ให้ติดตั้ง nano ก่อน
+apt update
+apt install -y nano
+
+#เเละเข้าไปเเก้ไฟล์
+nano /etc/gitlab/gitlab.rb 
+
+#ใช้คำสั่ง Ctrl+W เเละหา gitlab_rails['gitlab_shell_ssh_port']
+#เสร็จให้ กด Ctrl+O เพื่อ save เเล้วกด Enter เ
+gitlab_rails['gitlab_shell_ssh_port'] = 22    #ให้ลบ # ออก
+
+#ให้ใช้คำสั่งนี้หลังจากเเก้เสร็จเเละ exit หลังเสร็จ
+root@192:/# gitlab-ctl reconfigure
+#รอจนขึ้น 
+gitlab Reconfigured!
+root@192:/# exit
+pond@vm1:~$ #ออกมาหน้าปกติ
+
+#ให้เราให้ไปที่ VM2 เตรียม VM2 ให้รับ deploy ด้วย SSHเช็ค SSH
+pond@vm2:~$ sudo systemctl status ssh
+
+#กลับไปที่ VM1 ทำ key สำหรับ CI → เข้า VM2 (ฝั่ง CI)
+pond@vm1:~$ ssh-keygen -t ed25519 -f ~/ci_deploy_key -N ""
+
+#จะได้เเบบนี้
+Generating public/private ed25519 key pair.
+Your identification has been saved in /home/pond/ci_deploy_key
+Your public key has been saved in /home/pond/ci_deploy_key.pub
+The key fingerprint is:
+SHA256:gjEt6+6wGp8DDxuxxxxxx pond@vm1
+
+#ให้เรา copy ไปยัง VM2
+ssh-copy-id -i ~/ci_deploy_key.pub pond@192.168.100.21
+
+#เสร็จจะขึ้น
+Number of key(s) added: 1
+
+#ทดสอบด้วยคำสั่งนี้ จะได้คำว่าปอนด์มาคือได้เเล้ว
+pond@vm1:~$ ssh -i ~/ci_deploy_key pond@192.168.100.21 "whoami"
+pond
+
+#ให้กลับไปที่ VM2 ตั้ง Deploy Key ให้ VM2 clone repo จาก GitLab (VM2 → GitLab)
+#public key ไปใส่ใน GitLab ผมทำ page ไว้เเยก
+ssh-keygen -t ed25519 -f ~/.ssh/gitlab_deploy -N ""
+cat ~/.ssh/gitlab_deploy.pub
 
 ```
 
