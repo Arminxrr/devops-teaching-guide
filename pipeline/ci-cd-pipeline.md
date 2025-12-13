@@ -7,23 +7,23 @@ description: >-
 
 # ทำ CI/CD Pipeline
 
-## เริ่มเเรกเราจำสร้าง repo ไว้ก่อนกดไปที่ Admin
+### เริ่มเเรกเราจำสร้าง repo ไว้ก่อนกดไปที่ Admin
 
 <div align="left"><figure><img src="../.gitbook/assets/1.png" alt=""><figcaption></figcaption></figure></div>
 
-## กด Create Project
+### กด Create Project
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
-## ใส่ชื่อ Project ของเราเเละกด Create Project
+### ใส่ชื่อ Project ของเราเเละกด Create Project
 
 <figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
 
-## เราก็จะได้ repo เพื่อทำ CI/CD Pipeline
+### เราก็จะได้ repo เพื่อทำ CI/CD Pipeline
 
 <figure><img src="../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
-## ต่อไปให้เราไปทำที่ VM1 เเละ VM2&#x20;
+### ต่อไปให้เราไปทำที่ VM1 เเละ VM2&#x20;
 
 ติดตั้ง ubuntu ทั้งสอง VM ให้เรียบร้อยก่อน&#x20;
 
@@ -120,43 +120,43 @@ Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
 
 </code></pre>
 
-## ตั้งค่า GitLab CI Variables (สำคัญ)
+### ตั้งค่า GitLab CI Variables (สำคัญ)
 
 ให้ไปที่หน้า Project&#x20;
 
 <figure><img src="../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
 
-## ตั้งค่า repo ไปที่ CI/CD
+### ตั้งค่า repo ไปที่ CI/CD
 
 <figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
 
-## ไปที่ Variables&#x20;
+### ไปที่ Variables&#x20;
 
 <figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
 
-## กดเข้าไป Variables ให้กด Add Variables&#x20;
+### กดเข้าไป Variables ให้กด Add Variables&#x20;
 
 <figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
 
-## ตั้งค่า Visible ใส่ key เป็น `DEPLOY_SSH_KEY` &#x20;
+### ตั้งค่า Visible ใส่ key เป็น `DEPLOY_SSH_KEY` &#x20;
 
 ใส่ Value ด้วยคำสั่ง `cat ~/ci_deploy_key`  เเละ Add Variables
 
 <div align="left"><figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure></div>
 
-## เปิดไฟล์แล้วคัดลอกทั้งก้อน
+### เปิดไฟล์แล้วคัดลอกทั้งก้อน
 
 <figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
 
-## ตั้งค่า GitLab CI Variables ก็จะสำเร็จ
+### ตั้งค่า GitLab CI Variables ก็จะสำเร็จ
 
 <figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
 
-## ต่อมาให้เราสร้างโครงสร้างเเบบนี้เพื่อ test Pipeline ก่อน
+### ต่อมาให้เราสร้างโครงสร้างเเบบนี้เพื่อ test Pipeline ก่อน
 
 <figure><img src="../.gitbook/assets/Untitled design (3).png" alt=""><figcaption></figcaption></figure>
 
-## ตัวอย่างไฟล์   `.gitlab-ci.yml` Depoly
+### ตัวอย่างไฟล์   `.gitlab-ci.yml` Depoly
 
 ```shellscript
 stages:

@@ -1,18 +1,18 @@
 # การสร้าง Gitlab-Runner Register
 
-## url [`http://192.168.100.11/`](http://192.168.100.11/dashboard/home)  ที่ตั้งไว้ กดไปที่ Admin&#x20;
+### url [`http://192.168.100.11/`](http://192.168.100.11/dashboard/home)  ที่ตั้งไว้ กดไปที่ Admin&#x20;
 
 <div align="left"><figure><img src="../.gitbook/assets/42.png" alt=""><figcaption></figcaption></figure></div>
 
-## กดที่ CI/CD เเละ Runner สร้าง Create instance runner
+### กดที่ CI/CD เเละ Runner สร้าง Create instance runner
 
 <figure><img src="../.gitbook/assets/43.png" alt=""><figcaption></figcaption></figure>
 
-## เพิ่ม Tags เเล้วติ๊ก Run untagged jobs
+### เพิ่ม Tags เเล้วติ๊ก Run untagged jobs
 
 <div align="left"><figure><img src="../.gitbook/assets/44.png" alt=""><figcaption></figcaption></figure></div>
 
-## เลื่อนไปล่างสุดกด Create  runner
+### เลื่อนไปล่างสุดกด Create  runner
 
 <figure><img src="../.gitbook/assets/45.png" alt=""><figcaption></figcaption></figure>
 
@@ -43,7 +43,7 @@ Enter an executor: custom, shell, ssh, parallels, virtualbox, docker+machine, do
 shell
 ```
 
-## Token ที่ต้องใช้เวลา register
+### Token ที่ต้องใช้เวลา register
 
 <figure><img src="../.gitbook/assets/46.png" alt=""><figcaption></figcaption></figure>
 
