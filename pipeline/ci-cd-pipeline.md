@@ -55,7 +55,7 @@ apt install -y nano
 nano /etc/gitlab/gitlab.rb 
 
 #ใช้คำสั่ง Ctrl+W เเละหา gitlab_rails['gitlab_shell_ssh_port']
-#เสร็จให้ กด Ctrl+O เพื่อ save เเล้วกด Enter เ
+#เสร็จให้ กด Ctrl+O เพื่อ save เเล้วกด Enter 
 gitlab_rails['gitlab_shell_ssh_port'] = 22    #ให้ลบ # ออก
 
 #ให้ใช้คำสั่งนี้หลังจากเเก้เสร็จเเละ exit หลังเสร็จ
@@ -96,7 +96,7 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICRTOUF5NRApfudFVSZ5h4S0+Atwa7zIiv/8sxRKh63M
 
 #เสร้จจากนั้นตั้ง ~/.ssh/config บน VM2
 nano ~/.ssh/config
-#พิมพ์คำสั่งนี้ลงไป
+#พิมพ์คำสั่งนี้ลงไป เสร็จให้ กด Ctrl+O เพื่อ save เเล้วกด Enter
 Host gitlab
   HostName 192.168.100.11 #เป็น url ของ gitlab
   Port 2222               #เป็น port ของ gitlab server
@@ -107,14 +107,54 @@ Host gitlab
   PasswordAuthentication no
   KbdInteractiveAuthentication no
 
+#ตั้ง permission
+pond@vm2:~$ chmod 600 ~/.ssh/config
+pond@vm2:~$ chmod 600 ~/.ssh/gitlab_deploy
+
+#ทดสอบ VM2 → GitLab
+pond@vm2:~$ ssh -T gitlab
+Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
+
 
 ```
 
-## ให้เราสร้างโครงสร้างเเบบนี้เพื่อ test Pipeline ก่อน
+## ตั้งค่า GitLab CI Variables (สำคัญ)
+
+ให้ไปที่หน้า Project&#x20;
+
+<figure><img src="../.gitbook/assets/12 (2).png" alt=""><figcaption></figcaption></figure>
+
+## ตั้งค่า repo ไปที่ CI/CD
+
+<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+
+## ไปที่ Variables&#x20;
+
+<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+
+## กดเข้าไป Variables ให้กด Add Variables&#x20;
+
+<figure><img src="../.gitbook/assets/15.png" alt=""><figcaption></figcaption></figure>
+
+## ตั้งค่า Visible ใส่ key เป็น `DEPLOY_SSH_KEY` &#x20;
+
+ใส่ Value ด้วยคำสั่ง `cat ~/ci_deploy_key`  เเละ Add Variables
+
+<div align="left"><figure><img src="../.gitbook/assets/16.png" alt=""><figcaption></figcaption></figure></div>
+
+## เปิดไฟล์แล้วคัดลอกทั้งก้อน
+
+<figure><img src="../.gitbook/assets/17 (1).png" alt=""><figcaption></figcaption></figure>
+
+## ตั้งค่า GitLab CI Variables ก็จะสำเร็จ
+
+<figure><img src="../.gitbook/assets/18.png" alt=""><figcaption></figcaption></figure>
+
+## ต่อมาให้เราสร้างโครงสร้างเเบบนี้เพื่อ test Pipeline ก่อน
 
 <figure><img src="../.gitbook/assets/Untitled design (3).png" alt=""><figcaption></figcaption></figure>
 
-ตัวอย่างไฟล์   `.gitlab-ci.yml`   ใช้งานได้จริง
+## ตัวอย่างไฟล์   `.gitlab-ci.yml` Depoly
 
 ```shellscript
 stages:
