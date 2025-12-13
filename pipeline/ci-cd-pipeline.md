@@ -90,8 +90,23 @@ pond
 
 #ให้กลับไปที่ VM2 ตั้ง Deploy Key ให้ VM2 clone repo จาก GitLab (VM2 → GitLab)
 #public key ไปใส่ใน GitLab ผมทำ page ไว้เเยก
-ssh-keygen -t ed25519 -f ~/.ssh/gitlab_deploy -N ""
-cat ~/.ssh/gitlab_deploy.pub
+pond@vm2:~$ ssh-keygen -t ed25519 -f ~/.ssh/gitlab_deploy -N ""
+pond@vm2:~$ cat ~/.ssh/gitlab_deploy.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICRTOUF5NRApfudFVSZ5h4S0+Atwa7zIiv/8sxRKh63M pond@vm2
+
+#เสร้จจากนั้นตั้ง ~/.ssh/config บน VM2
+nano ~/.ssh/config
+#พิมพ์คำสั่งนี้ลงไป
+Host gitlab
+  HostName 192.168.100.11 #เป็น url ของ gitlab
+  Port 2222               #เป็น port ของ gitlab server
+  User git
+  IdentityFile ~/.ssh/gitlab_deploy
+  IdentitiesOnly yes
+  PreferredAuthentications publickey
+  PasswordAuthentication no
+  KbdInteractiveAuthentication no
+
 
 ```
 
