@@ -23,11 +23,13 @@ description: >-
 
 <figure><img src="../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
-## ต่อไปให้เราไปทำที่ VM1 เเละ VM2
+## ต่อไปให้เราไปทำที่ VM1 เเละ VM2&#x20;
 
-```shellscript
+ติดตั้ง ubuntu ทั้งสอง VM ให้เรียบร้อยก่อน&#x20;
+
+<pre class="language-shellscript"><code class="lang-shellscript">#อัพเดตทั้งสอง VM เเละติดตั้ง ssh
 sudo apt update
-sudo apt install -y openssh-server
+sudo apt install -y open<a data-footnote-ref href="#user-content-fn-1">ssh</a>-server
 
 เสร็จแล้วเช็คว่า service รันหรือยัง
 sudo systemctl status ssh
@@ -116,7 +118,7 @@ pond@vm2:~$ ssh -T gitlab
 Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
 
 
-```
+</code></pre>
 
 ## ตั้งค่า GitLab CI Variables (สำคัญ)
 
@@ -270,3 +272,5 @@ CMD ["sh", "-c", "echo Hello from myapp && sleep 3600"]
 {% hint style="success" %}
 สามารถเอางานการจริงมาต่อยอดได้ 🎄
 {% endhint %}
+
+[^1]: 

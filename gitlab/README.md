@@ -1,7 +1,7 @@
 ---
 description: >-
   การติดตั้ง GitLab และ GitLab Runner เพื่อเตรียมระบบสำหรับการทำงานแบบ CI/CD และ
-  DevOps Pipeline
+  DevOps Pipeline บน VM1 เท่านั้น
 icon: gitlab
 ---
 
