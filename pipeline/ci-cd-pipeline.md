@@ -23,7 +23,7 @@ description: >-
 
 <figure><img src="../.gitbook/assets/4 (3).png" alt=""><figcaption></figcaption></figure>
 
-## ต่อไปให้เราไปทำที่ VM1
+## ต่อไปให้เราไปทำที่ VM1 เเละ VM2
 
 ```shellscript
 sudo apt update
