@@ -1,33 +1,17 @@
 ---
+description: >-
+  การนำระบบที่พัฒนาเสร็จสมบูรณ์ขึ้นใช้งานจริงในสภาพแวดล้อม Production
+  ผ่านกระบวนการ CI/CD
 icon: code-pull-request-closed
 ---
 
-# บทที่ 5 - Deploy ระบบจริง
+# บทที่ 10 - Deploy ระบบจริง
 
-ไฟล์ตัวอย่าง `/etc/nginx/sites-available/app.conf`:
+> **การ Deploy ระบบจริง (Production Deployment)** เป็นขั้นตอนสุดท้ายของกระบวนการ DevOps ที่นำระบบจากสภาพแวดล้อมการพัฒนาและทดสอบขึ้นใช้งานจริง โดยอาศัยกระบวนการอัตโนมัติผ่าน GitLab CI/CD เพื่อให้การ Deploy มีความถูกต้อง รวดเร็ว และลดความผิดพลาด บทนี้จะอธิบายแนวคิด ขั้นตอน และแนวทางการ Deploy ระบบให้พร้อมใช้งานในสภาพแวดล้อม Production
 
-```nginx
-server {
-  listen 80;
-  server_name _;  # เปลี่ยนเป็นโดเมนของคุณถ้ามี
+#### **ขั้นตอนหลักของการ Deploy ระบบ**
 
-  location /api/ {
-    proxy_set_header Host $host;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_pass http://127.0.0.1:3000/;
-  }
-
-  location / {
-    root /var/www/html;
-    try_files $uri /index.html;
-  }
-}
-```
-
-คำสั่งพื้นฐาน:
-
-```bash
-sudo nginx -t
-sudo systemctl reload nginx
-sudo journalctl -u nginx -f
-```
+* เตรียมสภาพแวดล้อม Production
+* Build และทดสอบระบบผ่าน CI/CD Pipeline
+* Deploy Backend และ Frontend
+* ตรวจสอบการทำงานของระบบหลังการ Deploy
