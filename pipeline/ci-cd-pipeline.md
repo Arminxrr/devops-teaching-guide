@@ -258,3 +258,11 @@ deploy:
 FROM alpine:3.20
 CMD ["sh", "-c", "echo Hello from myapp && sleep 3600"]
 ```
+
+## หน้าตาใน repo เราต้องมีเเบบนี้
+
+<div align="left"><figure><img src="../.gitbook/assets/19.png" alt=""><figcaption></figcaption></figure></div>
+
+## เราก็จะ test สำเร็จเเล้วเเล้วสามารถเอาการจริงมาต่อยอดได้ 🎉🎉
+
+<figure><img src="../.gitbook/assets/20 (1).png" alt=""><figcaption></figcaption></figure>
