@@ -1,13 +1,18 @@
 ---
+description: >-
+  การใช้งาน GitLab CI/CD สำหรับสร้าง Pipeline อัตโนมัติ ตั้งแต่การ Build, Test
+  ไปจนถึง Deploy ระบบ
 icon: square-gitlab
 ---
 
-# บทที่ 4 - GitLab CI/CD
+# บทที่ 6 - GitLab CI/CD
 
-ไฟล์หลักของ GitLab CI คือ `.gitlab-ci.yml` ที่ root ของ repo\
-ประกอบด้วย **stages** และ **jobs** โดย jobs จะรันบน Runner
+> **GitLab CI/CD** เป็นระบบอัตโนมัติที่ช่วยจัดการกระบวนการพัฒนาซอฟต์แวร์ตั้งแต่การตรวจสอบโค้ด การทดสอบ ไปจนถึงการ Deploy ระบบ โดยใช้ไฟล์ `.gitlab-ci.yml` ที่อยู่ใน root ของ repository เพื่อกำหนด stages และ jobs ซึ่งแต่ละ job จะถูกรันโดย GitLab Runner ช่วยให้การทำงานเป็นระบบ ลดข้อผิดพลาด และเพิ่มความรวดเร็วในการส่งมอบซอฟต์แวร์
 
-แนวคิดสำคัญ
+#### **วัตถุประสงค์ของบทนี้**
 
-* ใช้ **tags** บน jobs ให้ตรงกับ runner
-* ใช้ **artifacts** แชร์ผล build ระหว่าง jobs
+* เข้าใจแนวคิดและโครงสร้างการทำงานของ GitLab CI/CD
+* สามารถเขียนและจัดการไฟล์ `.gitlab-ci.yml` ได้อย่างถูกต้อง
+* เข้าใจการทำงานของ stages และ jobs ใน Pipeline
+* ใช้งาน GitLab Runner เพื่อรันงาน CI/CD
+* นำ CI/CD ไปประยุกต์ใช้กับการพัฒนาและ Deploy ระบบจริง
