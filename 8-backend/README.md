@@ -1,4 +1,7 @@
 ---
+description: >-
+  การพัฒนาและจัดการระบบ Backend สำหรับรองรับการทำงานของแอปพลิเคชัน การเชื่อมต่อ
+  API และการทำงานร่วมกับระบบ DevOps
 icon: vscode
 ---
 
@@ -13,9 +16,13 @@ icon: vscode
 * เตรียม Backend ให้พร้อมสำหรับการใช้งานร่วมกับ Docker และ CI/CD
 * เชื่อมต่อ Backend กับระบบอื่น เช่น Frontend, IoT&#x20;
 
+***
+
 **การนำ Backend ไปใช้งาน**
 
-* เชื่อมต่อกับ Frontend Application
+* เชื่อมต่อกับ Frontend&#x20;
 * รองรับการทำงานของระบบ IoT และ Automation
 * ทำงานร่วมกับ Docker และ Docker Compose
 * Deploy ผ่าน GitLab CI/CD ไปยัง Production
+
+***
