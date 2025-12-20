@@ -6,6 +6,8 @@ description: >-
 
 # สร้าง DataBase เเละ การสร้าง table
 
+สร้างไฟล์ `docker-compose.yml` ใน repo เรา
+
 ```shellscript
 version: "3.8"                     # ระบุเวอร์ชันของ docker-compose ที่ใช้
 
@@ -201,8 +203,26 @@ app.listen(PORT, () => {
 
 <div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
 
-ต่อมาเราจะเช็คว่าตารางมาจริงรึเปล่าผมใช้  dbeaver ในการเช็ค
+ต่อมาเราจะเช็คว่าตารางมาจริงรึเปล่าผมใช้  dbeaver ในการเช็คให้เราโหลดมาเเละติดตั้ง
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+วิธีการใช้<br>
+
+<figure><img src="../.gitbook/assets/Untitled design (1).png" alt=""><figcaption></figcaption></figure>
+
+กดเข้ามาใน New database ให้ใส่ตามที่สร้างในไฟล์ `docker-compose.yml`
+
+<div align="left"><figure><img src="../.gitbook/assets/22.png" alt=""><figcaption></figcaption></figure></div>
+
+พอเรากด Test Connection เสร็จเเบบนี้คือผ่านเเล้วกด Finish
+
+<div align="left"><figure><img src="../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure></div>
+
+เเล้วกดมาดูที่ Table ว่ามีตารางขึ้นไหมถ้ามีเป็นอันเสร็จ
+
+<figure><img src="../.gitbook/assets/24 (2).png" alt=""><figcaption></figcaption></figure>
+
+
 
 [^1]: 

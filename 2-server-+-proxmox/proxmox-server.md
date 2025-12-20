@@ -2,7 +2,7 @@
 
 ### หน้าเลือก Boot เมนูเริ่มติดตั้ง
 
-<div align="left"><figure><img src="../.gitbook/assets/Untitled design (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/Untitled design (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ### หน้ายอมรับเงื่อนไขการใช้งาน
 
