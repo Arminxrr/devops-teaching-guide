@@ -42,8 +42,8 @@ sudo docker exec -it gitlab-ce gitlab-rake "gitlab:password:reset[root]"
 
 ### URL [`http://192.168.100.11/`](http://192.168.100.11/dashboard/projects) ที่เราตั้ง url ไว้ login ด้วย root กับ password ที่ reset ไว้
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > GITLAB CE SERVER&#x20;
