@@ -207,7 +207,7 @@ app.listen(PORT, () => {
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
-วิธีการใช้<br>
+วิธีการใช้
 
 <figure><img src="../.gitbook/assets/Untitled design (1).png" alt=""><figcaption></figcaption></figure>
 
