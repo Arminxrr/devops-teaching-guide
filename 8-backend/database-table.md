@@ -267,6 +267,43 @@ ON CONFLICT (username) DO NOTHING;
 
 <div align="left"><figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure></div>
 
+สร้าง hash password “ทันที” บน Ubuntu
 
+```shellscript
+node -e "const bcrypt=require('bcrypt'); bcrypt.hash('admin123',10).then(h=>console.log(h))"
+#'admin123' = รหัสผ่านจริง
+
+#10 = salt rounds (มาตรฐาน)
+
+#ผลลัพธ์ = bcrypt hash
+```
+
+ตัวอย่าง output
+
+```shellscript
+$2b$10$Z4nYkXq5g0Q6sV6kYfZCRePpJ7y1K8Jp3oZzH6G4qPZz6dRzZQ8sK
+#คัดลอก hash นี้ไว้
+```
+
+กลับไปที่ Dbeaver เข้า SQL ใช้คำสั่งนี้เพื่อสร้าง user เเละสร้าง hash password
+
+```sql
+INSERT INTO users (username, password, role)
+VALUES (
+  'admin', 
+  '$2b$10$Z4nYkXq5g0Q6sV6kYfZCRePpJ7y1K8Jp3oZzH6G4qPZz6dRzZQ8sK',
+  'admin'
+)
+ON CONFLICT (username) DO NOTHING;
+
+```
+
+<figure><img src="../.gitbook/assets/Untitled design (3) (1).png" alt=""><figcaption></figcaption></figure>
+
+เราก็จะได้รหัสผ่านเเบบ hash password&#x20;
+
+<figure><img src="../.gitbook/assets/Untitled design (4).png" alt=""><figcaption></figcaption></figure>
+
+> ถ้าขึ้นเเบบนี้คือได้เเล้ว
 
 [^1]: 
