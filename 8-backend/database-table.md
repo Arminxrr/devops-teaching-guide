@@ -223,6 +223,50 @@ app.listen(PORT, () => {
 
 <figure><img src="../.gitbook/assets/24 (2).png" alt=""><figcaption></figcaption></figure>
 
+ให้เราอยู่ที่ Dbeaver เเล้วกด SQL
+
+<div align="left"><figure><img src="../.gitbook/assets/25.png" alt=""><figcaption></figcaption></figure></div>
+
+กด new script เพื่อจะเพิ่ม user เเละ role
+
+<div align="left"><figure><img src="../.gitbook/assets/26.png" alt=""><figcaption></figcaption></figure></div>
+
+```sql
+INSERT INTO users (username, password, role)
+VALUES ('admin', 'admin123', 'admin')
+ON CONFLICT (username) DO NOTHING;
+
+-- เพิ่มข้อมูลผู้ใช้ใหม่ลงในตาราง users
+INSERT INTO users (username, password, role)
+
+-- กำหนดค่าของแต่ละคอลัมน์ตามลำดับ
+VALUES (
+  'admin',        -- username: ชื่อผู้ใช้ระดับผู้ดูแลระบบ
+  'admin123',     -- password: รหัสผ่าน (ตัวอย่าง ใช้สำหรับ Dev / Lab)
+  'admin'         -- role: กำหนดสิทธิ์เป็น admin
+)
+
+-- ถ้า username ซ้ำกับข้อมูลที่มีอยู่แล้ว
+-- จะไม่เพิ่มข้อมูลใหม่ และไม่เกิด error
+ON CONFLICT (username) DO NOTHING;
+
+```
+
+เเล้วกดรันเเล้วกลับไปดูที่ table user ว่ามี user มาเเล้วหรือยัง<br>
+
+<figure><img src="../.gitbook/assets/27.png" alt=""><figcaption></figcaption></figure>
+
+ก็ได้ user เเบบนี้เลยถ้าไม่มีให้กด refresh นึงทีก็จะได้เเล้ว
+
+<figure><img src="../.gitbook/assets/Untitled design (2) (1).png" alt=""><figcaption></figcaption></figure>
+
+### ต่อไปเราจะเปลี่ยน hash password กัน
+
+โดยผมจะสร้างuser บน Dbeaver เลยโดนใช้เมนู SQL เเละติดตั้ง bcrypt (ในโปรเจกต์ backend)\
+`npm install bcrypt`
+
+<div align="left"><figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure></div>
+
 
 
 [^1]: 
