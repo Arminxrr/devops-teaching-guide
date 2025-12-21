@@ -219,7 +219,7 @@ app.listen(PORT, () => {
 
 <div align="left"><figure><img src="../.gitbook/assets/23.png" alt=""><figcaption></figcaption></figure></div>
 
-เเล้วกดมาดูที่ Table ว่ามีตารางขึ้นไหมถ้ามีเป็นอันเสร็จ
+เเล้วกดมาดูที่ Table ว่ามีตารางขึ้นไหมถ้ามีเป็นอันเสร็จเเค่นี้เราก็สามารถเพิ่ม user ไว้ทำ login ได้เเล้ว
 
 <figure><img src="../.gitbook/assets/24 (2).png" alt=""><figcaption></figcaption></figure>
 
