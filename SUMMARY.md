@@ -29,6 +29,7 @@
   * [โครงสร้าง Backend](8-backend/backend.md)
   * [สร้าง DataBase เเละ การสร้าง table](8-backend/database-table.md)
   * [สร้างเส้น Login API เเละใช้ postman](8-backend/login-api-postman.md)
+  * [ทำ Login + JWT Token](8-backend/login-+-jwt-token.md)
 * [บทที่ 9 -Fronend](9-fronend/README.md)
   * [Page 1](9-fronend/page-1.md)
 * [บทที่ 10 - Deploy ระบบจริง](nginx-reverse-proxy/README.md)
