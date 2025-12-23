@@ -18,6 +18,14 @@ IOTDEVOPS/                          # โฟลเดอร์โปรเจก
 └── server.js                       # จุดเริ่มต้นของแอป (รัน Express/Backend)
 ```
 
+เราจะทำโครงสร้างเเบบนี้ใน project
+
+```shellscript
+IOTDEVOPS/
+├── backend/                 // Express API + JWT + DB
+└── frontend/                // Vue (App.vue) Dashboard
+```
+
 เเต่ละ Folder ทำไรบ้าง
 
 * **config/**\
@@ -36,5 +44,3 @@ IOTDEVOPS/                          # โฟลเดอร์โปรเจก
   ใช้จัดการหลาย Container พร้อมกัน
 * **package.json / package-lock.json**\
   จัดการ dependencies และคำสั่งของโปรเจกต์
-* **server.js**\
-  ไฟล์หลักสำหรับเริ่มต้น Backend Server
