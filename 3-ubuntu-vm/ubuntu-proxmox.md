@@ -14,11 +14,11 @@
 
 ### หน้าเลือกเวอร์ชั่นให้ Done ต่อ
 
-<figure><img src="../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/32 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### หน้าตั้งค่า Network ให้เลือก ether ของเรา Edit IPv4&#x20;
 
-<figure><img src="../.gitbook/assets/33.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/33 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### หน้าตั้งค่า Network ให้เลือกเเบบ manual
 
@@ -26,15 +26,15 @@
 
 ### ตั้งค่า Network ให้เราใส่เเบบ Static IP ของเรา&#x20;
 
-<figure><img src="../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/35 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ตั้งค่า Network เสร็จให้เรากด Done ต่อ
 
-<figure><img src="../.gitbook/assets/36.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/36 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### หน้าตั้งค่า Server name สร้าง password ให้เรียบร้อย
 
-<figure><img src="../.gitbook/assets/37.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/37 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### พอติดตั้งเสร็จให้กด Reboot&#x20;
 

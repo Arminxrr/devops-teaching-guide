@@ -445,4 +445,48 @@ app.listen(PORT, () => {
 เเค่นี้เราก็จะได้ แสดงรายการทั้งหมดมีสอง role เเละมีสิทธิ์การใช้งานหน้าที่ต่างมีเส้น ลบ เพิ่ม เเก้ไข ตาม crud\
 CRUD ย่อมาจาก Create (สร้าง), Read (อ่าน), Update (อัปเดต), และ Delete (ลบ)
 
-### วิธีทดสอบว่าใช้งานได้ทุกเส้นไหม&#x20;
+### วิธีทดสอบว่าใช้งานได้ทุกเส้นไหม
+
+ให้เข้า postman ใส่ locahost ที่เราทำการเขียนไว้เเละตามด้วยเส้น api ที่อยู่ใน server.js เเละ ไฟล์ \
+route\usersroute.js ที่เราเขียนไว้เลย เเละ body ปรับเป็น raw นามสกุล json ใส่userที่เราทำการเข้า role dev มีสิทธิ์ต่างกับ user ให้เข้ากด send เเล้วทำการ login ได้เเล้วเเล้วเก็บเป็น token dev อันเราเช็คเส้น post ไปเรียบร้อย
+
+```json
+{
+  "username": "dev1",
+  "password": "dev123"
+}
+```
+
+<figure><img src="../.gitbook/assets/32.png" alt=""><figcaption></figcaption></figure>
+
+ต่อมาเราเช็คเส้น get คือเส้นการดึง user มาทั้งหมดที่อยู่table ในdatabase มาทั้งหมดเลือกเป็น GET เเล้วใส่ locahost ของเราที่เราทำ api/user เเละไปก๊อป token ที่หน้า login มาก่อนนำมาวางไว้ที่ Authorization เเละเลือก bearar token เเละนำ token ที่ก๊อปมาจากหน้า login มาใส่ไว้ทำการกด send ก็จะได้ข้อมูลมาเเล้ว
+
+<div align="left"><figure><img src="../.gitbook/assets/33 (1).png" alt=""><figcaption></figcaption></figure></div>
+
+เส้นต่อไปเราจำทำการเช็คเส้น api\post เพื่อสร้าง user ขึ้นมาใช้เฉพาะ role dev เท่านั้น user จะไม่มีสิทธิ์สร้างได้ให้เราปรับเป็น post [http://localhost:3000/api/users](http://localhost:3000/api/users) เเล้วกด send ก็จะสามารถสร้าง user ได้เเล้ว
+
+```json
+//ใน body
+{
+  "username": "user2",
+  "password": "123456",
+  "role": "user"
+}
+```
+
+<figure><img src="../.gitbook/assets/35.png" alt=""><figcaption></figcaption></figure>
+
+ต่อไปคือเส้น PUT คือการเเก้ไขข้อมูลหรือการเเข้ไข user เพิ่ม role เปลี่ยนชื่ออะไรต่างๆให้เราทำนำ token มาใส่เเล้วปรับ body จะยกตัวอย่างมาคือการเปลี่ยน role ของผู้ใช้งาน\
+&#x20;[http://localhost:3000/api/users/](http://localhost:3000/api/users/7) ตามด้วย ID ที่จะเเก้ไข
+
+```json
+{
+  "role": "dev"
+}
+```
+
+<figure><img src="../.gitbook/assets/36.png" alt=""><figcaption></figcaption></figure>
+
+เส้นสุดท้ายคือ DELETE คือเส้นลบผู้ใช้หรือ user  [http://localhost:3000/api/users/](http://localhost:3000/api/users/9) ตามด้วย ID ที่จะลบ
+
+<figure><img src="../.gitbook/assets/37.png" alt=""><figcaption></figcaption></figure>
