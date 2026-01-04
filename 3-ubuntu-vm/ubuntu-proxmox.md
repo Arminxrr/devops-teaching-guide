@@ -14,7 +14,7 @@
 
 ### หน้าเลือกเวอร์ชั่นให้ Done ต่อ
 
-<figure><img src="../.gitbook/assets/32 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/32 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### หน้าตั้งค่า Network ให้เลือก ether ของเรา Edit IPv4&#x20;
 

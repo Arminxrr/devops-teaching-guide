@@ -44,6 +44,6 @@ sudo docker exec -it gitlab-ce gitlab-rake "gitlab:password:reset[root]"
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > GITLAB CE SERVER&#x20;
