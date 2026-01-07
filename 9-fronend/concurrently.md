@@ -37,3 +37,7 @@ npm install concurrently --save-dev
 ```shellscript
 npm run dev
 ```
+
+<div align="left"><figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure></div>
+
+> ถ้าได้เเบบนี้ก็พร้อมที่จะ Deploy
