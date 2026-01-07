@@ -32,7 +32,7 @@
   * [ทำ Login + JWT Token](8-backend/login-+-jwt-token.md)
   * [ทำเส้นดูข้อมูลตัวเองจาก token](8-backend/token.md)
 * [บทที่ 9 -Fronend](9-fronend/README.md)
-  * [Page 1](9-fronend/page-1.md)
+  * [เตรียมโครงสร้าง](9-fronend/undefined.md)
 * [บทที่ 10 - Deploy ระบบจริง](nginx-reverse-proxy/README.md)
   * [สร้าง Reop เพื่อ Deploy](nginx-reverse-proxy/reop-deploy.md)
 * [บทที่ 11 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
