@@ -35,6 +35,8 @@
 * [บทที่ 9 Node RED](9-node-red/README.md)
   * [โครงสร้างการทำงาน](9-node-red/undefined.md)
   * [Backend API](9-node-red/backend-api.md)
+  * [ESP 32 dhtt 11](9-node-red/esp-32-dhtt-11.md)
+  * [Node Red](9-node-red/node-red.md)
 * [บทที่ 10 - Deploy ระบบจริง](nginx-reverse-proxy/README.md)
   * [สร้าง Reop เพื่อ Deploy](nginx-reverse-proxy/reop-deploy.md)
 * [บทที่ 11 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
