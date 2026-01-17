@@ -201,11 +201,11 @@ app.listen(PORT, () => {
 
 เเล้วลองรันอีกรอบถ้า log ขึ้นเเบบนี้เเสดงว่าตารางถูกสร้างเเล้ว
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ต่อมาเราจะเช็คว่าตารางมาจริงรึเปล่าผมใช้  dbeaver ในการเช็คให้เราโหลดมาเเละติดตั้ง
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 วิธีการใช้
 

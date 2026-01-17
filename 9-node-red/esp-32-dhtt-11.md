@@ -8,7 +8,23 @@ VCC เข้ากับ 5V ของ ESP 32 out เข้าไปที่ D1
 
 <div align="left"><figure><img src="../.gitbook/assets/Screenshot 2026-01-17 123249.png" alt=""><figcaption></figcaption></figure></div>
 
-ให้เราเข้าไปที่ arduino ide ติดตั้ง library ให้ครบ เลือก port ปรับให้ตรงกับบอร์ดที่เราใช้
+ให้เราติดตั้ง Mosquitto MQTT ติดตั้งเสร็จให้เราเข้า Terminal เเล้วพิมพ์คำสั่ง&#x20;
+
+```shellscript
+ipconfig #ก็จะได้ ip ของเครื่องมา
+Wireless LAN adapter Wi-Fi:
+
+   Connection-specific DNS Suffix  . :
+   IPv6 Address. . . . . . . . . . . : 
+   Temporary IPv6 Address. . . . . . : 
+   Link-local IPv6 Address . . . . . :
+   IPv4 Address. . . . . . . . . . . : 192.168.1.xxx
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 
+                                       192.168.1.1
+```
+
+ให้เราเข้าไปที่ arduino ide ติดตั้ง library ให้ครบ เลือก port ปรับให้ตรงกับบอร์ดที่เราใช้เเล้วใช้ wifi กับ ip MQTT
 
 ```javascript
 #include <WiFi.h>          // เรียกใช้ไลบรารี WiFi ของ ESP32 เพื่อเชื่อมต่อเครือข่ายไร้สาย
@@ -112,3 +128,8 @@ void loop() {
 
 ```
 
+เเล้วลองเทสดูว่าได้ค่า Temp/Humid ไหม
+
+<div align="left"><figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure></div>
+
+> ถ้า IP ไม่ connet ส่วนมากจะเกิดปัญหาที่ MQTT
