@@ -13,11 +13,11 @@ description: >-
 
 ### กด Create Project
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/2 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ใส่ชื่อ Project ของเราเเละกด Create Project
 
-<figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/3 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### เราก็จะได้ repo เพื่อทำ CI/CD Pipeline
 
@@ -128,11 +128,11 @@ Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
 
 ### ตั้งค่า repo ไปที่ CI/CD
 
-<figure><img src="../.gitbook/assets/13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/13 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### ไปที่ Variables&#x20;
 
-<figure><img src="../.gitbook/assets/14.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/14 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### กดเข้าไป Variables ให้กด Add Variables&#x20;
 

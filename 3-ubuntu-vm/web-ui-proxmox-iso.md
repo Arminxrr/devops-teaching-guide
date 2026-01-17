@@ -10,7 +10,7 @@
 
 ### หน้าสร้าง VM บน Proxmox
 
-<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/12 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### หน้ากำหนด VM ID เเละ Name VM เลือก iso ที่อัพไว้&#x20;
 

@@ -27,4 +27,4 @@ pond$ code .                    #สามารถดูไฟล์ node_modul
 
 เราก็จะได้  `node_modules`  มาอยู่ในโฟลเดอร์เพื่อเอามาใช้ทำโปรเจคต่างๆ
 
-<div align="left"><figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
