@@ -10,7 +10,7 @@ npm create vue@latest ##เเล้วติดตั้ง app vue
 
 เราก็จะได้ folder มาเพื่อเอามาใช้งานเเล้วสร้างที่ขาดหายเลยตามรูปที่เเนบไปให้เลยครับ
 
-<div align="left"><figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure></div>
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 ### เเต่ละ Folder ทำงานยังไง
 

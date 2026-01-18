@@ -1,3 +1,7 @@
+---
+description: เพื่อเราจะให้มันเเสดงบน fronend ก็คือการเเสดงว่าบนเว
+---
+
 # ติดตั้งแพ็กเกจเเละทำการเชื่อม backend
 
 ```shellscript
@@ -89,6 +93,7 @@ import HomePage from './views/HomePage.vue'
 import LoginPage from './views/LoginPage.vue'
 import MePage from './views/MePage.vue'
 import UsersPage from './views/UsersPage.vue'
+import SensorsPage from './views/SensorsPage.vue'
 import { auth, refreshMe } from './services/authStore'
 
 const routes = [
@@ -96,6 +101,7 @@ const routes = [
   { path: '/login', component: LoginPage },
   { path: '/me', component: MePage },            // ต้อง login
   { path: '/users', component: UsersPage }       // ต้อง login
+  { path: '/sensors', component: SensorsPage }
 ]
 
 const router = createRouter({
@@ -278,6 +284,80 @@ const reload = async () => {
     <p style="opacity:.75;">
       หน้านี้ใช้ GET /api/me เพื่อยืนยัน token และแสดงข้อมูลผู้ใช้
     </p>
+  </div>
+</template>
+
+```
+
+### หน้า SensorsPage.vue
+
+ไว้ดูค่าเเล้ว Real time เเละ
+
+```javascript
+<script setup>
+import { ref, onMounted } from 'vue'
+import { api } from '../services/api'
+
+const sensors = ref([])
+const error = ref('')
+const isLoading = ref(false)
+const limit = ref(10)
+
+const loadSensors = async () => {
+  isLoading.value = true
+  error.value = ''
+  try {
+    const res = await api.get('/api/sensors', {
+      params: { limit: Number(limit.value) || 50 }
+    })
+    sensors.value = Array.isArray(res.data) ? res.data : []
+  } catch (e) {
+    error.value = e?.response?.data?.error || e.message || 'โหลดข้อมูลไม่สำเร็จ'
+    sensors.value = []
+  } finally {
+    isLoading.value = false
+  }
+}
+
+onMounted(loadSensors)
+</script>
+
+<template>
+  <div>
+    <h2>Sensors</h2>
+
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0;">
+      <label>
+        Limit:
+        <input v-model.number="limit" type="number" min="1" max="500" style="width:90px;" />
+      </label>
+      <button @click="loadSensors" :disabled="isLoading">
+        {{ isLoading ? 'Loading...' : 'Reload' }}
+      </button>
+    </div>
+
+    <p v-if="error" style="color:red;">{{ error }}</p>
+
+    <table v-if="sensors.length" border="1" cellpadding="6" cellspacing="0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Temp</th>
+          <th>Humid</th>
+          <th>Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="row in sensors" :key="row.id">
+          <td>{{ row.id }}</td>
+          <td>{{ row.temp }}</td>
+          <td>{{ row.humid }}</td>
+          <td>{{ row.created_at }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p v-else-if="!error" style="opacity:.75;">ยังไม่มีข้อมูลเซนเซอร์</p>
   </div>
 </template>
 
