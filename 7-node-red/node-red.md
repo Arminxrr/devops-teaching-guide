@@ -2,11 +2,11 @@
 description: Workflow ที่ยืดหยุ่น
 ---
 
-# Node Red
+# วิธีการใช้ Node Red
 
 ให้เรารัน node red เเล้วเข้าตาม Server now running at http://127.0.0.1:1880/
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 เเล้วก็เข้าก็จะได้หน้าตาเเบบนี้ให้เราลง dashboard ก่อนไปที่ตั้งค่า
 
@@ -108,8 +108,8 @@ msg.payload = { temp: 24.1, humid: 36, ... }
 
 ถ้ามันส่งค่าเเบบนี้ได้เเล้วเเสดงว่ามันเข้าไปที่ node red สำเสร็จให้เราไปดูที่ debug
 
-<div align="left"><figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 เราก็สามารถดู dashboard ได้ก็จะเห็น temp /  humid
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>

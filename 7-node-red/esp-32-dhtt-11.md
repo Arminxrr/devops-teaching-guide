@@ -130,6 +130,6 @@ void loop() {
 
 เเล้วลองเทสดูว่าได้ค่า Temp/Humid ไหม
 
-<div align="left"><figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 > ถ้า IP ไม่ connet ส่วนมากจะเกิดปัญหาที่ MQTT

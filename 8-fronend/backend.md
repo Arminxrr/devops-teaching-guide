@@ -502,3 +502,15 @@ onMounted(loadUsers)
 ```shellscript
 npm run dev 
 ```
+
+เราก็จะสามารถเปิดเว็บเราได้เเล้ว
+
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="success" %}
+เราก็จะสามารถดู Temp/Humid ได้เเล้วในเว็บ🎉
+{% endhint %}
