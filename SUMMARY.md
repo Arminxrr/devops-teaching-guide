@@ -6,6 +6,7 @@
   * [เตรียมสภาพแวดล้อมบน Windows](01-แนะนำ-devops/เตรียมสภาพแวดล้อม.md)
   * [ติดตั้ง Ubuntu ให้พร้อมใช้งาน Node.js](devops/ubuntu-node.js.md)
   * [ติดตั้งDocker Desktop](devops/docker-desktop.md)
+  * [video บทที่ 1](devops/video-1.md)
 * [บทที่ 2 -ติดตั้ง Server + Proxmox](2-server-+-proxmox/README.md)
   * [สิ่งที่ต้องเตรียมก่อนติดตั้ง Proxmox](2-server-+-proxmox/proxmox.md)
   * [วิธีการติดตั้ง Proxmox บน Server](2-server-+-proxmox/proxmox-server.md)
