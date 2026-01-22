@@ -39,6 +39,4 @@
   * [ทำ CI/CD Pipeline](pipeline/ci-cd-pipeline.md)
   * [ขั้นตอน public key ไปใส่ใน GitLab](pipeline/public-key-gitlab.md)
   * [เตรียมไฟล์ Deploy ระบบจริง](pipeline/deploy.md)
-* [บทที่ 10 - Deploy ระบบจริง](nginx-reverse-proxy/README.md)
-  * [สร้าง Reop เพื่อ Deploy](nginx-reverse-proxy/reop-deploy.md)
-* [บทที่ 11 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
+* [บทที่ 10 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
