@@ -117,8 +117,14 @@ pond@vm2:~$ chmod 600 ~/.ssh/gitlab_deploy
 pond@vm2:~$ ssh -T gitlab
 Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
 
-
 </code></pre>
+
+### ติดตั้ง Docker บน VM2 ด้วย (สำคัญ)
+
+```shellscript
+#เเละใช้คำสั่งก่อนจะ Deploy ไปยัง VM2
+sudo usermod -aG docker ชื่อ VM
+```
 
 ### ตั้งค่า GitLab CI Variables (สำคัญ)
 
