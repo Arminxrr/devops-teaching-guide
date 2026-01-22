@@ -123,8 +123,12 @@ Welcome to GitLab, @root! #คือสำเร็จ🎉🎉
 
 ```shellscript
 #เเละใช้คำสั่งก่อนจะ Deploy ไปยัง VM2
-sudo usermod -aG docker ชื่อ VM
+sudo usermod -aG docker ชื่อ VMกหฟก
 ```
+
+{% hint style="warning" %}
+สอนติดตั้งอยู่บทที่ 4
+{% endhint %}
 
 ### ตั้งค่า GitLab CI Variables (สำคัญ)
 
