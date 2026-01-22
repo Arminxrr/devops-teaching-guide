@@ -43,5 +43,5 @@
   * [ทำ CI/CD Pipeline](pipeline/ci-cd-pipeline.md)
   * [ขั้นตอน public key ไปใส่ใน GitLab](pipeline/public-key-gitlab.md)
   * [เตรียมไฟล์ Deploy ระบบจริง](pipeline/deploy.md)
-  * [video บทที่ 5](pipeline/video-5.md)
+  * [video บทที่ 9](pipeline/video-9.md)
 * [บทที่ 10 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
