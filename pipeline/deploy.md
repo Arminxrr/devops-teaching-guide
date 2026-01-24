@@ -197,6 +197,62 @@ deploy:                                  # job ชื่อ deploy
 
 ```
 
+```javascript
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building Docker images..."
+    - docker build -f backend/Dockerfile -t iotdevops-backend:latest backend
+    - docker build -f Frontend/appvue/Dockerfile -t iotdevops-frontend:latest Frontend/appvue
+  tags:
+    - pond
+
+test:
+  stage: test
+  image: node:22
+  script:
+    - echo "Installing Node 22 (for shell runners)..."
+    - curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+    - apt-get install -y nodejs
+    - echo "Running tests..."
+    - cd Frontend/appvue && npm ci && npm run build
+    - cd ../../backend && npm ci && (npm run test --if-present || true)
+  tags:
+    - pond
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploy to VM2"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - echo "$DEPLOY_SSH_KEY" | tr -d '\r' > ~/.ssh/id_ed25519
+    - chmod 600 ~/.ssh/id_ed25519
+    - ssh-keyscan -H 192.168.100.102 >> ~/.ssh/known_hosts     #อย่าลืมเปลี่ยน
+    - |
+      ssh -i ~/.ssh/id_ed25519 pondsry@192.168.100.102 " #อย่าลืมเปลี่ยน
+        mkdir -p ~/deploy-pond &&
+        cd ~/deploy-pond &&
+        if [ -d .git ]; then
+          git fetch origin main &&
+          git reset --hard origin/main
+        else
+          git clone git@gitlab:root/test.git .           #อย่าลืมเปลี่ยน
+        fi &&
+        docker compose up -d --build
+      "
+  only:
+    - main
+  tags:
+    - pond
+
+```
+
 > ให้เราทำความเข้าใจการใช้ gitlab runner เเละ repo ต่างๆใน gitlab ของเรา
 
 ต่อมาพอเราสร้างไฟล์พวกนี้ครบเราจะ CI/CD pipeline ขั้นตอนการโยนงานขึ้น repo gitlab server ที่เราทำไว้กัน
