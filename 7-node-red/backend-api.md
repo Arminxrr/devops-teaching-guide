@@ -33,6 +33,75 @@ module.exports = router; // ส่งออก (export) router ตัวนี�
 ไปต่อเราจะไปที่ Folder controllers เเล้วสร้างเเล้วสร้าง sensorController.js
 
 ```javascript
+const db = require('../config/db');
+
+const INGEST_SECRET = process.env.INGEST_SECRET || 'pond-ingest-secret';
+
+// POST /api/sensors/ingest
+async function ingestSensor(req, res) {
+  try {
+    const headerSecret = req.header('X-Sensor-Secret');
+    if (headerSecret !== INGEST_SECRET) {
+      return res.status(401).json({ error: 'unauthorized' });
+    }
+
+    const { temp, humid, created_at } = req.body || {};
+    if (typeof temp !== 'number' || typeof humid !== 'number') {
+      return res.status(400).json({ error: 'temp and humid must be numbers' });
+    }
+
+    const query = `
+      INSERT INTO sensors (temp, humid, created_at)
+      VALUES ($1, $2, COALESCE($3::timestamptz, NOW()))
+      RETURNING *
+    `;
+    const values = [temp, humid, created_at || null];
+    const { rows } = await db.query(query, values);
+    res.status(201).json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'server error' });
+  }
+}
+
+// GET /api/sensors
+async function getSensors(req, res) {
+  try {
+    const limit = Math.min(parseInt(req.query.limit || '50', 10), 500);
+    const { rows } = await db.query(
+      'SELECT * FROM sensors ORDER BY id DESC LIMIT $1',
+      [limit]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'server error' });
+  }
+}
+
+// GET /api/sensors/latest
+async function getLatestSensor(req, res) {
+  try {
+    const { rows } = await db.query(
+      'SELECT * FROM sensors ORDER BY id DESC LIMIT 1'
+    );
+    if (!rows.length) return res.status(404).json({ error: 'no data' });
+    res.json(rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'server error' });
+  }
+}
+
+module.exports = {
+  ingestSensor,
+  getSensors,
+  getLatestSensor
+};
+
+```
+
+```javascript
 const db = require('../config/db'); // ดึงโมดูลเชื่อมต่อฐานข้อมูล (เช่น pg Pool) มาใช้สำหรับ query ฐานข้อมูล
 
 const INGEST_SECRET = process.env.INGEST_SECRET || 'pond-ingest-secret'; 
