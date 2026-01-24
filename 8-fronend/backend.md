@@ -1,6 +1,6 @@
 # ติดตั้งแพ็กเกจเเละทำการเชื่อม backend
 
-ติดตั้ง app vue ให้เรากดข้ามด้วยการกด Enter เเละตั้งชื่อ Folder&#x20;
+### ติดตั้ง app vue ให้เรากดข้ามด้วยการกด Enter เเละตั้งชื่อ Folder&#x20;
 
 ```shellscript
 ##ติดตั้ง app vue บน folder ของเรา
@@ -20,13 +20,13 @@ npm i axios vue-router
 
 ```
 
-ตั้งค่า API base ด้วย Vite env ไฟล์ `Frontend/appvue/.env`
+### ตั้งค่า API base ด้วย Vite env ไฟล์ `Frontend/appvue/.env`
 
 ```javascript
 VITE_API_BASE=http://localhost:3000
 ```
 
-`src/services/api.js` (axios + Bearer token อัตโนมัติ)
+### `src/services/api.js` (axios + Bearer token อัตโนมัติ)
 
 ```javascript
 import axios from 'axios'
@@ -47,7 +47,7 @@ api.interceptors.request.use((config) => {
 
 ```
 
-`src/services/authStore.js` (เก็บสถานะ user/token )
+### `src/services/authStore.js` (เก็บสถานะ user/token )
 
 ```javascript
 import { reactive } from 'vue'
@@ -92,7 +92,7 @@ export const clearAuth = () => {
 
 ```
 
-`src/router.js` (4 หน้า + guard)
+### `src/router.js` (4 หน้า + guard)
 
 ```javascript
 import { createRouter, createWebHistory } from 'vue-router'
@@ -104,10 +104,10 @@ import SensorsPage from './views/SensorsPage.vue'
 import { auth, refreshMe } from './services/authStore'
 
 const routes = [
-  { path: '/', component: HomePage },            // เรียก GET / ของ backend
+  { path: '/', component: HomePage },            // เรียก GET /api/health
   { path: '/login', component: LoginPage },
   { path: '/me', component: MePage },            // ต้อง login
-  { path: '/users', component: UsersPage }       // ต้อง login
+  { path: '/users', component: UsersPage },      // ต้อง login
   { path: '/sensors', component: SensorsPage }
 ]
 
@@ -129,57 +129,16 @@ router.beforeEach(async (to) => {
 })
 
 export default router
-
 ```
 
-src/main.js
+### เพิ่มไฟล์ `src/main.js`
 
 ```javascript
-<script setup>
-import { computed, onMounted } from 'vue'
-import { auth, refreshMe, clearAuth } from './services/authStore'
-import { useRouter } from 'vue-router'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-const router = useRouter()
-
-const isLoggedIn = computed(() => !!auth.token)
-const role = computed(() => auth.user?.role || '-')
-
-const logout = () => {
-  clearAuth()
-  router.push('/login')
-}
-
-onMounted(async () => {
-  // ถ้ามี token ค้างอยู่ ลองโหลดข้อมูล user
-  if (auth.token) await refreshMe()
-})
-</script>
-
-<template>
-  <div style="max-width: 980px; margin: 20px auto; font-family: sans-serif;">
-    <header style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
-      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
-        <router-link to="/">Home</router-link>
-        <router-link to="/users" v-if="isLoggedIn">Users</router-link>
-        <router-link to="/me" v-if="isLoggedIn">Me</router-link>
-        <router-link to="/login" v-if="!isLoggedIn">Login</router-link>
-      </div>
-
-      <div style="display:flex;gap:10px;align-items:center;">
-        <span v-if="isLoggedIn">
-          <b>{{ auth.user?.username }}</b> (role: <b>{{ role }}</b>)
-        </span>
-        <button v-if="isLoggedIn" @click="logout">Logout</button>
-      </div>
-    </header>
-
-    <hr />
-
-    <router-view />
-  </div>
-</template>
-
+createApp(App).use(router).mount('#app')
 ```
 
 ### `src/App.vue` (เมนู + แสดง role + logout)
