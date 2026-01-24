@@ -29,6 +29,7 @@
   * [สร้างเส้น Login API เเละใช้ postman](6-backend/login-api-postman.md)
   * [ทำ Login + JWT Token](6-backend/login-+-jwt-token.md)
   * [ทำเส้นดูข้อมูลตัวเองจาก token](6-backend/token.md)
+  * [video บทที่ 6](6-backend/video-6.md)
 * [บทที่ 7 Node RED](7-node-red/README.md)
   * [โครงสร้างการทำงาน](7-node-red/undefined.md)
   * [Backend API](7-node-red/backend-api.md)
