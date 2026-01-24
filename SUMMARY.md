@@ -36,7 +36,7 @@
   * [ESP 32 dhtt 11](7-node-red/esp-32-dhtt-11.md)
   * [วิธีการใช้ Node Red](7-node-red/node-red.md)
 * [บทที่ 8 -Fronend](8-fronend/README.md)
-  * [เตรียมโครงสร้าง](8-fronend/undefined.md)
+  * [โครงสร้าง Fronend](8-fronend/fronend.md)
   * [ติดตั้งแพ็กเกจเเละทำการเชื่อม backend](8-fronend/backend.md)
   * [ทำให้ backend เเละ fronend ทำงานพร้อมกัน](8-fronend/backend-fronend.md)
 * [บทที่ 9 - GitLab CI/CD](pipeline/README.md)
