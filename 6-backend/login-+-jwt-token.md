@@ -10,7 +10,7 @@ description: >-
 ติดตั้งแพ็กเกจที่ต้องใช้
 
 ```shellscript
-npm i jsonwebtoken dotenv
+npm i jsonwebtoken dotenv cors
 ```
 
 สร้างไฟล์ `.env` (อยู่ระดับเดียวกับ `server.js` / `package.json`)&#x20;
