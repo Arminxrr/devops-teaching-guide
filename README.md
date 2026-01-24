@@ -23,17 +23,16 @@ icon: house-chimney-crack
 
 ### โครงสร้างเนื้อหาโดยสรุป
 
-1. แนะนำ DevOps และการเตรียมเครื่องมือ
-2. ติดตั้ง Server และ Proxmox
-3. ติดตั้ง Ubuntu บน Virtual Machine
-4. Docker และ Docker Compose
-5. ติดตั้ง GitLab และ GitLab Runner
-6. การทำงานของ GitLab CI/CD
-7. Node-RED และระบบ Automation
-8. ระบบ Backend
-9. ระบบ Frontend
-10. Deploy ระบบจริง
-11. สรุปภาพรวมและไฟล์ Template
+* แนะนำ DevOps และการเตรียมเครื่องมือ
+* ติดตั้ง Server และ Proxmox
+* ติดตั้ง Ubuntu บน Virtual Machine
+* Docker และ Docker Compose
+* ติดตั้ง GitLab และ GitLab Runner
+* Node-RED และระบบ Automation
+* ระบบ Backend
+* ระบบ Frontend
+* การทำงานของ GitLab CI/CD
+* สรุปภาพรวมและไฟล์ Template
 
 ***
 
