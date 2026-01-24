@@ -1,8 +1,15 @@
----
-description: เพื่อเราจะให้มันเเสดงบน fronend ก็คือการเเสดงว่าบนเว
----
-
 # ติดตั้งแพ็กเกจเเละทำการเชื่อม backend
+
+ติดตั้ง app vue ให้เรากดข้ามด้วยการกด Enter เเละตั้งชื่อ Folder&#x20;
+
+```shellscript
+##ติดตั้ง app vue บน folder ของเรา
+npm create vue@latest
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+> สำคัญมากอย่าลืมติดตั้งเเพ็กเกจ
 
 ```shellscript
 #เข้า folder ของงานเรา
