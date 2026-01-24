@@ -35,6 +35,7 @@
   * [Backend API](7-node-red/backend-api.md)
   * [ESP 32 dhtt 11](7-node-red/esp-32-dhtt-11.md)
   * [วิธีการใช้ Node Red](7-node-red/node-red.md)
+  * [video บทที่ 7](7-node-red/video-7.md)
 * [บทที่ 8 -Fronend](8-fronend/README.md)
   * [โครงสร้าง Fronend](8-fronend/fronend.md)
   * [ติดตั้งแพ็กเกจเเละทำการเชื่อม backend](8-fronend/backend.md)
