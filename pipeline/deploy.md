@@ -41,7 +41,7 @@ RUN npm ci                                  // ติดตั้ง dependencie
 COPY . .                                    // คัดลอกโค้ดทั้งหมดเข้าไปใน /app
 RUN npm run build                            // สั่ง build (เช่น Vite/React) ให้ได้ไฟล์ static ออกมาในโฟลเดอร์ dist
 
-FROM 192.168.200.14:5000/nginx:latest        // สเตจที่ 2 ใช้ nginx image จาก private registry ของคุณ เพื่อรันเว็บแบบ static
+FROM nginx:alpine       // สเตจที่ 2 ใช้ nginx image จาก private registry ของคุณ เพื่อรันเว็บแบบ static
 COPY nginx.conf /etc/nginx/conf.d/default.conf // เอาไฟล์ config nginx ของโปรเจกต์ไปแทนค่า default.conf
 COPY --from=build /app/dist /usr/share/nginx/html // คัดลอกไฟล์ที่ build เสร็จแล้วจากสเตจ build ไปไว้ที่โฟลเดอร์เว็บของ nginx
 EXPOSE 80                                    // เปิดพอร์ต 80 สำหรับให้คนเข้าผ่าน HTTP
