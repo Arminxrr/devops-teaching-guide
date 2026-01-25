@@ -547,6 +547,31 @@ onMounted(loadUsers)
 
 ```
 
+### เพิ่มไฟล์ nginx.conf&#x20;
+
+```javascript
+server {
+  listen 80;
+  server_name _;
+
+  # ✅ บอก nginx ว่าไฟล์เว็บอยู่ที่ไหน
+  root /usr/share/nginx/html;
+  index index.html;
+
+  # ✅ เสิร์ฟ Vue SPA (refresh /dashboard ก็ไม่ 404)
+  location / {
+    try_files $uri $uri/ /index.html;
+  }
+
+  # ✅ ยิง /api ไป backend service
+  location /api/ {
+    proxy_pass http://backend:3000/api/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+  }
+}
+```
+
 เเล้วลองทดสอบรัน Frontend ด้วยคำสั่ง
 
 ```shellscript
