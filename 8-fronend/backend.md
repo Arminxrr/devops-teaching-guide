@@ -137,6 +137,7 @@ export default router
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import './assets/main.css'
 
 createApp(App).use(router).mount('#app')
 ```
@@ -170,6 +171,7 @@ onMounted(async () => {
     <header style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
       <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
         <router-link to="/">Home</router-link>
+        <router-link to="/sensors">Sensors</router-link>
         <router-link to="/users" v-if="isLoggedIn">Users</router-link>
         <router-link to="/me" v-if="isLoggedIn">Me</router-link>
         <router-link to="/login" v-if="!isLoggedIn">Login</router-link>
@@ -186,6 +188,88 @@ onMounted(async () => {
     <hr />
 
     <router-view />
+  </div>
+</template>
+
+```
+
+### หน้า login เก็บ token เเละเช็ค role `src/views/LoginPage.vue`
+
+```javascript
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { api } from '../services/api'
+import { setToken, refreshMe } from '../services/authStore'
+
+const router = useRouter()
+
+const username = ref('')
+const password = ref('')
+const error = ref('')
+const loading = ref(false)
+
+const submit = async () => {
+  error.value = ''
+  loading.value = true
+  try {
+    const res = await api.post('/api/login', {
+      username: username.value,
+      password: password.value
+    })
+    const token = res.data?.token
+    if (!token) throw new Error('Missing token in response')
+    setToken(token)
+    await refreshMe()
+    router.push('/me')
+  } catch (e) {
+    error.value = e.response?.data?.message || e.message
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
+<template>
+  <div class="page">
+    <div class="grid two">
+      <div class="panel hero">
+        <span class="pill">Secure Access</span>
+        <div class="hero-title space-top">Sign in to manage your IoT fleet</div>
+        <p class="hero-sub space-top">
+          ระบบยืนยันตัวตนเพื่อควบคุมอุปกรณ์ ตรวจสอบข้อมูล และจัดการผู้ใช้อย่างปลอดภัย
+        </p>
+        <div class="form-row space-top">
+          <span class="chip">Token auth</span>
+          <span class="chip">Role-based</span>
+          <span class="chip">Audit ready</span>
+        </div>
+      </div>
+
+      <div class="panel panel-narrow">
+        <div class="page-header">
+          <h2>Login</h2>
+          <p class="muted">เข้าใช้งานเพื่อจัดการข้อมูลอุปกรณ์และบัญชีผู้ใช้</p>
+        </div>
+
+        <form class="form-column" @submit.prevent="submit">
+          <input v-model="username" placeholder="username" autocomplete="username" />
+          <input
+            v-model="password"
+            type="password"
+            placeholder="password"
+            autocomplete="current-password"
+          />
+          <button type="submit" :disabled="loading">
+            {{ loading ? 'Logging in...' : 'Login' }}
+          </button>
+        </form>
+
+        <p v-if="error" class="error space-top">
+          {{ error }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -255,7 +339,7 @@ const reload = async () => {
 
 ```
 
-### หน้า SensorsPage.vue
+### หน้า `SensorsPage.vue`
 
 ไว้ดูค่าเเล้ว Real time เเละ
 
