@@ -564,3 +564,7 @@ npm run dev
 {% hint style="success" %}
 เราก็จะสามารถดู Temp/Humid ได้เเล้วในเว็บ🎉
 {% endhint %}
+
+สามารถนำมาต่อยอดได้
+
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
