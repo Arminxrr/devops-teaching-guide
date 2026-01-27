@@ -514,30 +514,6 @@ library-backend/
 
 ***
 
-### &#x20;Bonus Challenges (+20 คะแนน)
-
-#### 1. Email Notifications (5 คะแนน)
-
-* ส่งอีเมลแจ้งเตือนเมื่อใกล้ครบกำหนดคืน
-* แจ้งเตือนเมื่อหนังสือที่จองพร้อมให้ยืม
-
-#### 2. Advanced Search (5 คะแนน)
-
-* Full-text search ใน title, author, description
-* ใช้งาน MySQL FULLTEXT index
-
-#### 3. API Rate Limiting (5 คะแนน)
-
-* จำกัดจำนวน requests ต่อ IP
-* ใช้ express-rate-limit
-
-#### 4. Data Export (5 คะแนน)
-
-* Export รายงานเป็น CSV/Excel
-* API สำหรับ download รายงาน
-
-***
-
 ### Resources ที่อนุญาตให้ใช้
 
 * Documentation: Node.js, Express.js, MySQL docs
