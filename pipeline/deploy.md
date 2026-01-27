@@ -11,7 +11,7 @@ description: >-
 โครงสร้างที่เราต้องเตรียมก่อนจะ Deloy มีการบวนทำ stage คือ build, test, deploy จำเป็นต้องมีไฟล์ Dockerfile ไว้ไหนbackend เเละใน fronend ใช้ช้สร้าง image ของฝั่ง Backend (Node/Express) เพื่อรัน API เเละในFrontend/appvue/Dockerfile ใช้สร้าง image ของฝั่ง Frontend (Vue build แล้วเสิร์ฟด้วย Nginx)\
 ทั้งคู่ถูกเรียกจาก docker-compose.yml ใน service backend และ frontend ถ้าจะให้กระบวนการ build/test/deploy ทำงานอัตโนมัติบน GitLab CI ก็ต้องดูที่ .gitlab-ci.yml เพราะไฟล์นี้เป็นตัวกำหนดทุกขั้นตอนของ pipeline นั่นเอง
 
-### backend/Dockerfile
+### `backend/Dockerfile`
 
 * สร้าง image ของฝั่ง Backend (Node/Express) เพื่อรัน API
 
@@ -29,9 +29,9 @@ CMD ["node", "server.js"]           // คำสั่งเริ่มรั�
 
 ```
 
-### Frontend/appvue/Dockerfile
+### `Frontend/appvue/Dockerfile`
 
-* สร้าง image ของฝั่ง Frontend (Vue build → เสิร์ฟด้วย Nginx)
+* สร้าง image ของฝั่ง Frontend (Vue build เสิร์ฟด้วย Nginx)
 
 ```javascript
 FROM node:20-alpine AS build                 // สเตจที่ 1 ชื่อ build ใช้ Node.js 20 บน Alpine สำหรับ “build” ไฟล์ frontend
@@ -49,7 +49,7 @@ CMD ["nginx", "-g", "daemon off;"]           // สั่ง nginx รันแ�
 
 ```
 
-### docker-compose.yml
+### `docker-compose.yml`
 
 * ในแต่ละ service จะระบุ build: { context, dockerfile } เพื่อบอกว่าจะใช้ Dockerfile ไหนสร้าง image
 
@@ -118,7 +118,7 @@ networks:
 
 ```
 
-### **.gitlab-ci.yml**&#x20;
+### **`.gitlab-ci.yml`**&#x20;
 
 * คือ pipeline ที่สั่ง build/test/deploy อัตโนมัติ
 * ในขั้น deploy มันรัน `docker compose up -d --build` บนเครื่องปลายทางคำสั่งนี้จะไปอ่าน docker-compose.yml แล้วใช้ Dockerfile ของแต่ละ service สร้างและรันจริง

@@ -1,3 +1,9 @@
+---
+description: >-
+  การ “Register GitLab Runner” คือการผูกเครื่อง/ตัวรันเนอร์เข้ากับ GitLab
+  เพื่อให้ GitLab ส่งงาน CI/CD pipeline มารันบนเครื่องนั้นได้จริง
+---
+
 # การสร้าง Gitlab-Runner Register
 
 ### url [`http://192.168.100.11/`](http://192.168.100.11/dashboard/home)  ที่ตั้งไว้ กดไปที่ Admin&#x20;

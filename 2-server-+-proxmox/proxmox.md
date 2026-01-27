@@ -12,5 +12,6 @@
 * Server ที่รองรับ Virtualization
 * เว็บเบราว์เซอร์สำหรับเข้าหน้า Proxmox Dashboard
 
-
-
+{% hint style="success" %}
+เตรียมอุปกรณ์ให้พร้อม
+{% endhint %}

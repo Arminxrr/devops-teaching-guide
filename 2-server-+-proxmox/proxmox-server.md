@@ -33,3 +33,7 @@
 ### ใช้เพื่อดู URL สำหรับเข้าเว็บ เช่น `https://192.168.1.10:8006` ตาม IP ที่เราตั้งไว้เราจะเห็นหน้าตา UI
 
 <div align="left"><figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure></div>
+
+{% hint style="danger" %}
+ถ้าใส่เน็ตคนละวงกับ router อาจทำให้ใช้งานไม่ได้เลย!!
+{% endhint %}
