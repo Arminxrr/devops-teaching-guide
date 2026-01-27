@@ -46,4 +46,5 @@
   * [ขั้นตอน public key ไปใส่ใน GitLab](pipeline/public-key-gitlab.md)
   * [เตรียมไฟล์ Deploy ระบบจริง](pipeline/deploy.md)
   * [video บทที่ 9](pipeline/video-9.md)
+* [โจทย์ฝึกซ้อม Backend API](backend-api.md)
 * [บทที่ 10 - สรุปและภาคผนวก](07-สรุปและภาคผนวก/สรุปการทำงานทั้งหมด.md)
