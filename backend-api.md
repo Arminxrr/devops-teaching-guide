@@ -1,5 +1,5 @@
 ---
-description: ะบบจัดการห้องสมุดดิจิทัล (Digital Library Management)
+description: ระบบจัดการห้องสมุดดิจิทัล (Digital Library Management)
 icon: box-open-full
 ---
 
