@@ -13,7 +13,7 @@ description: >-
 npm create vue@latest
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 > สำคัญมากอย่าลืมติดตั้งเเพ็กเกจ
 
