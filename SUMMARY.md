@@ -47,5 +47,5 @@
   * [เตรียมไฟล์ Deploy ระบบจริง](pipeline/deploy.md)
   * [video บทที่ 9](pipeline/video-9.md)
 * [โจทย์ฝึกซ้อม Backend API](backend-api.md)
-* [เเบบฝึกหัด](undefined/README.md)
+* [เเบบฝึกหัด](undefined.md)
   * [ทดสอบเส้น API ด้วย Postman](undefined/api-postman.md)
