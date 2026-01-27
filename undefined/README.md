@@ -14,7 +14,7 @@ icon: chart-gantt
 
 รูปภาพตัวอย่าง container บน Docker Desktop
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 สามารถใช้งานได้

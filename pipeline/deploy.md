@@ -268,11 +268,11 @@ git push -u origin main
 
 มันก็จะถาม user กับรหัสที่เราทำ gitlab server ถ้าได้มันก็จะเข้ามาเเบบนี้เเล้ว
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > ย้อนกลับไปดูการทำ CI/CD ตอนtset เลยย
 
-<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 > ก็จะสามารถ deploy ที่ไป VM 2 ได้เเล้วง่ายนิดเดียว
 
